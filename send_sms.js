@@ -7,7 +7,7 @@ const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, {
   lazyLoading: true,
 });
 
-export function sendMessage() {
+function sendMessage() {
   client.messages
     .create({
       body: `${MESSAGE_BODY}`,
@@ -17,3 +17,5 @@ export function sendMessage() {
     .then((message) => console.log(message.sid))
     .catch((error) => console.log(error));
 }
+
+module.exports = { sendMessage };

@@ -4,7 +4,7 @@ const fs = require("fs");
 const sms = require("./send_sms");
 app = express();
 
-cron.schedule("23 16 * * *", function () {
+cron.schedule("27 16 * * *", function () {
   sms.sendMessage();
   console.log("Sending check-in message");
 });
