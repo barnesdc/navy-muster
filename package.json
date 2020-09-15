@@ -1,0 +1,27 @@
+{
+  "name": "navy-muster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cjs": "0.0.11",
+    "core-util-is": "^1.0.2",
+    "express": "^4.17.1",
+    "twilio": "^3.49.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barnesdc/navy-muster.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barnesdc/navy-muster/issues"
+  },
+  "homepage": "https://github.com/barnesdc/navy-muster#readme"
+}
