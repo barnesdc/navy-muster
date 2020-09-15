@@ -7,11 +7,13 @@ const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, {
   lazyLoading: true,
 });
 
-client.messages
-  .create({
-    body: `${MESSAGE_BODY}`,
-    from: `${TWILIO_PHONE_NUMBER}`,
-    to: `${OUTBOUND_PHONE_NUMBER}`,
-  })
-  .then((message) => console.log(message.sid))
-  .catch((error) => console.log(error));
+export function sendMessage() {
+  client.messages
+    .create({
+      body: `${MESSAGE_BODY}`,
+      from: `${TWILIO_PHONE_NUMBER}`,
+      to: `${OUTBOUND_PHONE_NUMBER}`,
+    })
+    .then((message) => console.log(message.sid))
+    .catch((error) => console.log(error));
+}
